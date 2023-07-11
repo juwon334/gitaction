@@ -20,5 +20,5 @@ jobs:
         run: python -c "import sys; print(sys.version)" > log.txt
       - uses: actions/upload-artifact@v3
         with:
-         name: my-artifact
+         name: my-artifact${{matrix.python-version}}
          path: log.txt
